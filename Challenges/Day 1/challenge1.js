@@ -33,3 +33,4 @@ johnBMI = johnWeight / johnHeight ** 2;
 
 markHigherBMI = markBMI > johnBMI;
 console.log(markHigherBMI);
+console.log(Hello)
