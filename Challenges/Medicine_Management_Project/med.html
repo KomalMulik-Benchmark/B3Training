@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicine Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <center>
+      <h1>💊 Medicines Management System 💊</h1>
+      <section>
+        <input
+          class="sMed"
+          id="sMed"
+          type="text"
+          placeholder="Enter Medicine Name"
+          name="searchMed"
+        />
+        <button class="search styled" id="search" type="button">
+          Search Medicine
+        </button>
+        <center>
+          <div class="top_bar">
+            <div class="fi_bt">Notification Bar</div>
+            <p id="message">notifications...</p>
+          </div>
+          <div class="form-popup" style="display: none" id="listSearch">
+            <td>
+              <table class="list_t" id="searchList">
+                <thead>
+                  <tr>
+                    <th>Medicine Name</th>
+                    <th>Contents</th>
+                    <th>Quantity</th>
+                    <th>Price per UNIT</th>
+                    <th>Supplier Name</th>
+                    <th>Supplier's Contact</th>
+                  </tr>
+                </thead>
+                <tbody id="dynamicSearch"></tbody>
+              </table>
+              <button
+                type="button"
+                class="btn cancellist"
+                onclick="(closeSearch())"
+              >
+                Close
+              </button>
+            </td>
+          </div>
+        </center>
+      </section>
+
+      <button class="add styled" type="button">Add Medicine</button>
+      <!-- <button class="update styled" type="button">Update Medicine</button> -->
+      <button class="list styled" type="button">List Medicines</button>
+      <button class="delete styled" id="delete" type="button">
+        Delete All Medicines
+      </button>
+      <b>Sort By:</b>
+      <select class="ip" id="ip" name="b">
+        <option id="item1" value="Mname">Medicine Name</option>
+        <option id="item2" value="content">Content</option>
+        <option id="item3" value="sName">Supplier Name</option>
+      </select>
+      <button class="sort styled" id="sort" type="button">Sort</button>
+    </center>
+
+    <center>
+      <div class="form-popup" id="myForm">
+        <form
+          id="Form"
+          class="form-container"
+          onsubmit="event.preventDefault();"
+          autocomplete="off"
+        >
+          <h3>Add Medicine Details</h3>
+
+          <label for="Mname" class="required-field"><b>Medicine Name</b></label>
+          <input
+            type="text"
+            placeholder="Enter Medicine name"
+            id="Mname"
+            required
+          />
+
+          <label for="content" class="required-field"><b>Contents</b></label>
+          <input
+            type="text"
+            placeholder="Enter Medicine's contents"
+            id="content"
+            required
+          />
+
+          <label for="quantity" class="required-field"><b>Quantity</b></label>
+          <input
+            type="number"
+            placeholder="Enter Quantity of Medicine"
+            id="quantity"
+            required
+          />
+
+          <label for="price" class="required-field"
+            ><b>Price Per Unit</b></label
+          >
+          <input type="number" placeholder="Enter Price" id="price" required />
+
+          <label for="sName" class="required-field"><b>Supplier Name</b></label>
+          <input
+            type="text"
+            placeholder="Enter Suplier's Name"
+            id="sName"
+            required
+          />
+
+          <label for="contact" class="required-field"
+            ><b>Supplier's Contact</b></label
+          >
+          <input
+            type="number"
+            placeholder="Enter Mobile Number"
+            id="contact"
+            required
+          />
+
+          <input type="hidden" id="saveindex" />
+          <button type="submit" class="subbtn" id="subbtn">Add</button>
+          <button
+            class="add savebtn styled"
+            id="savebtn"
+            type="button"
+            style="display: none"
+          >
+            Save
+          </button>
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            Close
+          </button>
+        </form>
+      </div>
+    </center>
+
+    <center>
+      <div class="form-popup" style="margin-bottom: 5%" id="list">
+        <td>
+          <table class="list_t" id="storeList">
+            <thead>
+              <tr>
+                <th>Medicine Name</th>
+                <th>Contents</th>
+                <th>Quantity</th>
+                <th>Price per UNIT</th>
+                <th>Supplier Name</th>
+                <th>Supplier's Contact</th>
+              </tr>
+            </thead>
+            <tbody id="dynamicHere"></tbody>
+          </table>
+          <button type="button" class="btn cancellist" onclick="closelist()">
+            Close
+          </button>
+        </td>
+      </div>
+    </center>
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="script1.js"></script> -->
+    <script src="med.js"></script>
+  </body>
+</html>

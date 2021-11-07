@@ -1,0 +1,200 @@
+* {
+  background-color: burlywood;
+}
+
+h1 {
+  border: 20px solid blue;
+  font-size: 50px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: rgba(221, 9, 126, 1);
+}
+
+.sMed {
+  background-color: white;
+  width: 80%;
+  font-size: 20px;
+}
+
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  margin: 25px;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgb(144, 6, 6);
+  border-radius: 10px;
+  background-color: rgb(247, 10, 10);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: center;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+h3 {
+  border: 6px solid rgb(120, 90, 90);
+  font-size: 35px;
+  font: larger;
+  color: rgba(211, 14, 191);
+}
+
+label {
+  font-size: 20px;
+  padding: 3px;
+}
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: center;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 500px;
+  padding: 10px;
+  background-color: white;
+  margin-bottom: 10%;
+}
+
+/* Full-width input fields */
+.form-container input[type="text"],
+.form-container input[type="number"] {
+  width: 95%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type="text"]:focus,
+.form-container input[type="number"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn,
+.subbtn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.savebtn {
+  background-color: #04aa6d;
+  color: white;
+  margin-left: 0;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+  margin-bottom: 2%;
+}
+
+/* For table designing */
+table {
+  width: 80%;
+  margin: 40px auto;
+  background: rgb(124, 154, 167);
+}
+/* tr {
+  font-size: 115%;
+} */
+
+table.list {
+  text-align: center;
+  width: 100%;
+}
+
+td {
+  border: 1px solid rgb(204, 200, 200);
+  text-align: left;
+  padding: 8px 15px;
+}
+
+tr:nth-child(even),
+table.list thread > tr {
+  background-color: rgb(204, 200, 200);
+}
+
+.cancellist {
+  background-color: rgb(247, 10, 10);
+  font-size: larger;
+  margin-bottom: 5%;
+}
+
+.ip {
+  background-color: white;
+}
+
+.top_bar {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+  /* background: none repeat scroll 0 0 rgba(27, 26, 26, 0.7); */
+  bottom: 0;
+  padding: 5px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 70px;
+}
+
+.fi_bt {
+  color: #c300ff;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 3px;
+  text-align: center;
+}
+
+#message {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  font-size: larger;
+}
+
+/* red asterisk */
+.required-field::after {
+  content: "*";
+  color: red;
+}
