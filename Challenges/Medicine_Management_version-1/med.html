@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicine Management System</title>
+    <link rel="stylesheet" href="med.css" />
+</head>
+
+<body>
+    <center>
+        <h1>💊 Medicines Management System 💊</h1>
+        <section>
+            <input class="sMed" id="sMed" type="text" placeholder="Medicine Name or  Content" name="searchMed"
+                onkeyup="searchMed()" />
+            <center>
+                <div class="top_bar">
+                    <div class="fi_bt">Notification Bar</div>
+                    <p id="message">notifications...</p>
+                </div>
+                <div class="form-popup" style="display: none" id="listSearch">
+                    <td>
+                        <table class="list_t" id="searchList">
+                            <thead>
+                                <tr>
+                                    <th>Medicine Name</th>
+                                    <th>Contents</th>
+                                    <th>Quantity</th>
+                                    <th>Price per UNIT</th>
+                                    <th>Supplier Name</th>
+                                    <th>Supplier's Contact</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dynamicSearch"></tbody>
+                        </table>
+                        <button type="button" class="btn cancellist" onclick="(closeSearch())">
+                            Close
+                        </button>
+                    </td>
+                </div>
+            </center>
+        </section>
+
+        <button class="add styled" type="button">Add Medicine</button>
+        <button class="delete styled" id="delete" type="button">
+            Delete All Medicines
+        </button>
+    </center>
+
+    <center>
+        <div class="form-popup" id="myForm">
+            <form id="Form" class="form-container" onsubmit="event.preventDefault();" autocomplete="off">
+                <h3>Add Medicine Details</h3>
+
+                <label for="Mname" class="required-field"><b>Medicine Name</b></label>
+                <input type="text" placeholder="Enter Medicine name" id="Mname" required />
+
+                <label for="content" class="required-field"><b>Contents</b></label>
+                <input type="text" placeholder="Enter Medicine's contents" id="content" required />
+
+                <label for="quantity" class="required-field"><b>Quantity</b></label>
+                <input type="number" placeholder="Enter Quantity of Medicine" id="quantity" required />
+
+                <label for="price" class="required-field"><b>Price Per Unit</b></label>
+                <input type="number" placeholder="Enter Price" id="price" required />
+
+                <label for="sName" class="required-field"><b>Supplier Name</b></label>
+                <input type="text" placeholder="Enter Suplier's Name" id="sName" required />
+
+                <label for="contact" class="required-field"><b>Supplier's Contact</b></label>
+                <input type="number" placeholder="Enter Mobile Number" id="contact" required />
+
+                <input type="hidden" id="saveindex" />
+                <button type="submit" class="subbtn" id="subbtn">
+                    Save & Add More...
+                </button>
+                <button class="add savebtn styled" id="savebtn" type="button" style="display: none">
+                    Update
+                </button>
+                <button type="button" id="SavenClose" class="btn cancel">
+                    Save & Close
+                </button>
+            </form>
+        </div>
+    </center>
+
+    <center>
+        <div id=" list">
+            <td>
+                <table style="margin-bottom: 15%; text-align: center;" class="list_t" id="storeList">
+                    <thead>
+                        <tr id="trow">
+                            <th id="1" data_column="Mname" data-order="desc">Medicine Name &#9650</th>
+                            <th id="2" data-column="content" data-order="desc">Contents &#9650</th>
+                            <th id="3" data-column="quantity" data-order="desc">Quantity &#9650</th>
+                            <th id="4" data-column="price" data-order="desc">Price per UNIT &#9650</th>
+                            <th id="5" data-column="sName" data-order="desc">Supplier Name &#9650</th>
+                            <th id="6" data-column="contact" data-order="desc">Supplier's Contact &#9650</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dynamicHere"></tbody>
+                </table>
+            </td>
+        </div>
+    </center>
+    <script src="med.js"></script>
+</body>
+
+</html>
