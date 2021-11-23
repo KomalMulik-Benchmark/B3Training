@@ -1,0 +1,68 @@
+body {
+  background: white;
+}
+
+h3 {
+  white-space: nowrap;
+}
+
+/* Main Display */
+
+#nav {
+  font-family: "Pacifico", cursive;
+  font-size: 70px;
+  color: rgb(13, 91, 225);
+  border: 15px dotted rgb(30, 210, 51);
+  padding: 5px;
+}
+.mt-3 {
+  background-color: skyblue;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mt-4 {
+  width: 30%;
+}
+
+* {
+  margin: 0;
+}
+.container {
+  margin: 5px;
+}
+
+#card1 {
+  width: 30%;
+  float: left;
+  border: black 5px;
+  margin-bottom: 3%;
+}
+
+#card2 {
+  width: 70%;
+  float: right;
+  padding: auto;
+}
+
+#search {
+  width: 100%;
+  float: left;
+  /* margin-left: 30px; */
+}
+
+#searchBtn {
+  float: inline-start;
+  margin-left: 5px;
+}
+
+.form-control {
+  margin-bottom: 12px;
+}
+
+/* Form Fields */
+
+.error {
+  color: #ff0000;
+}

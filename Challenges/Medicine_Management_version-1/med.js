@@ -98,6 +98,7 @@ function showTask() {
     taskObj = JSON.parse(webtask);
   }
 
+  console.log(taskObj);
   while (dynamicHere.firstChild) {
     dynamicHere.firstChild.remove(dynamicHere.firstChild);
   }
@@ -128,6 +129,7 @@ function showTask() {
 
 // Edit task
 function onEdit(index) {
+  // console.log(index);
   openForm();
   document.getElementById("SavenClose").style.display = "none";
   let saveindex = document.getElementById("saveindex");
@@ -247,7 +249,7 @@ document.addEventListener(
     e = e || window.event;
     var target = e.target || e.srcElement,
       text = target.textContent || target.innerText;
-    console.log(text);
+    // console.log(text);
     if (text === "Medicine Name ▲" || text === "Medicine Name ▼") {
       element = document.getElementById("1");
       colAttr = element.getAttribute("data_column");
@@ -310,6 +312,7 @@ const sortt = (text, order, col) => {
 
 // Symbol changer in textField
 const field = (text) => {
+  console.log(text);
   first_part = text.slice(0, -1);
   sym = text.slice(-1);
 
